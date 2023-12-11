@@ -111,7 +111,9 @@ namespace G4TPC
 
   bool ENABLE_TIME_ORDERED_DISTORTIONS = false;
   std::string time_ordered_distortion_filename = std::string(getenv("CALIBRATIONROOT")) + "/distortion_maps/TimeOrderedDistortions.root";
-
+  
+  bool ENABLE_NOT_REACHES_READOUT = false;
+  
   // distortion corrections
   bool ENABLE_CORRECTIONS = false;
   auto correction_filename = std::string(getenv("CALIBRATIONROOT")) + "/distortion_maps/static_only_inverted_10-new.root";

@@ -415,6 +415,11 @@ void TPC_Cells()
 
     distortionMap->Init();
     edrift->setTpcDistortion( distortionMap );
+    
+    auto reachesReadout = new PHG4TpcElectronDrift;
+    if (ENABLE_NOT_REACHES_READOUT){
+    	set_flag_threshold_distortion(false,0.5);
+	}
   }
 
   double tpc_readout_time = 105.5/ G4TPC::tpc_drift_velocity_sim;  // ns
